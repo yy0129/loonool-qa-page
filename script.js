@@ -1,8 +1,44 @@
-const faqButtons = document.querySelectorAll(".faq-title");
-
-faqButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const item = btn.parentElement;
-    item.classList.toggle("open");
-  });
-});
+// FAQ 数据可以单独维护
+const FAQ_DATA = [
+  {
+    question: "LOONOOL 是什么？",
+    answer:
+      "LOONOOL 是一款帮助你判断图片是否适合商用（Safe-to-Use）的工具。你上传一张图片，我们会自动分析视觉、文案和基础行业规则，并生成一份清晰易懂的可用性报告。"
+  },
+  {
+    question: "LOONOOL 和普通相似度工具有什么不同？",
+    answer: `
+      大多数相似度工具只告诉你“这张图和别人像不像”。LOONOOL 的关注点不是“像”，而是：这张图是否适合商用？有没有可能造成视觉混淆或误解？
+      <ul>
+        <li>是否存在让人看不清、误读、误解的视觉结构</li>
+        <li>是否有容易和常见图形混淆的关键元素</li>
+        <li>图形的稳定度、辨识度是否足够</li>
+        <li>哪些部分可能在应用场景中出现问题</li>
+      </ul>
+      简单来说：相似度工具告诉你像不像；LOONOOL 告诉你“能不能用、哪里要注意、怎么改更稳”。`
+  },
+  {
+    question: "LOONOOL 适合谁使用？",
+    answer: `
+      <ul>
+        <li>正在做品牌图形 / Logo 的设计团队</li>
+        <li>需要频繁制作产品图、电商图的运营团队</li>
+        <li>想降低视觉“撞脸”概率的品牌方</li>
+        <li>需要判断图片能否用于广告或包装的市场部门</li>
+      </ul>
+      任何想要“稳一点再用图”的人，都用得到 LOONOOL。`
+  },
+  {
+    question: "Safe-to-Use 报告里面有什么？",
+    answer: `
+      Safe-to-Use 报告不是相似度报告，而是一份“图片可用性体检”，包含：
+      <ul>
+        <li>视觉稳定性分析</li>
+        <li>潜在混淆点提醒（非法律判定）</li>
+        <li>独特性 / 辨识度表现</li>
+        <li>可视化标注（重点亮点和注意点）</li>
+        <li>总体可用性等级</li>
+      </ul>`
+  },
+  // 你可以继续扩展更多条目…
+];
