@@ -2,37 +2,144 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LOONOOL 常见问题</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="hero">
-    <div class="hero__content">
-      <p class="badge">FAQ · 常见问题</p>
+    <div class="hero__inner">
+      <p class="badge">LOONOOL · FAQ</p>
       <h1>LOONOOL 常见问题</h1>
-      <p class="subtitle">
-        找到关于 LOONOOL 的常见问题和答案；若仍有疑问，请发送邮件至
-        <a href="mailto:hello@loonool.com">hello@loonool.com</a>。
+      <p class="intro">
+        以下内容为 LOONOOL 官方 FAQ 文档原文（12 条问答）。<br>
+        你可以直接查阅，也可以点击侧边目录快速定位到某个问题。
       </p>
-      <div class="search-box">
-        <input id="faqSearch" type="text" placeholder="搜索关键字..." />
-        <span class="icon">⌕</span>
-      </div>
     </div>
   </header>
 
-  <main class="faq-section">
-    <div id="faqList" class="faq-list">
-      <!-- FAQ 项会由 JS 注入 -->
-    </div>
-  </main>
+  <div class="layout">
+    <aside class="toc" id="toc">
+      <!-- JS 会自动生成目录 -->
+    </aside>
 
-  <footer class="page-footer">
-    © 2025 LOONOOL · 如果你需要定制化版本，欢迎联系我们
-  </footer>
+    <main class="content" id="faq">
+      <article id="faq-1">
+        <h2>1. LOONOOL 是什么？</h2>
+        <p>
+          LOONOOL 是一款帮助你判断图片是否适合商用（Safe-to-Use）的工具。
+          你上传一张图片，我们会自动分析视觉、文案和基础行业规则，并生成一份清晰易懂的可用性报告。
+        </p>
+      </article>
 
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+      <article id="faq-2">
+        <h2>2. LOONOOL 和普通相似度工具有什么不同？</h2>
+        <p>
+          大多数相似度工具只告诉你“这张图和别人像不像”。LOONOOL 的关注点不是“像”，而是：
+        </p>
+        <p>这张图是否适合商用？有没有可能造成视觉混淆或误解？我们会从可用性的角度分析图片：</p>
+        <ul>
+          <li>是否存在让人看不清、误读、误解的视觉结构</li>
+          <li>是否有容易和常见图形混淆的关键元素</li>
+          <li>图形的稳定度、辨识度是否足够</li>
+          <li>哪些部分可能在应用场景中出现问题</li>
+        </ul>
+        <p>简单来说：相似度工具告诉你像不像；LOONOOL 告诉你“能不能用、哪里要注意、怎么改更稳”。</p>
+      </article>
+
+      <article id="faq-3">
+        <h2>3. LOONOOL 适合谁使用？</h2>
+        <ul>
+          <li>正在做品牌图形 / Logo 的设计团队</li>
+          <li>需要频繁制作产品图、电商图的运营团队</li>
+          <li>想降低视觉“撞脸”概率的品牌方</li>
+          <li>需要判断图片能否用于广告或包装的市场部门</li>
+        </ul>
+        <p>任何想要“稳一点再用图”的人，都用得到 LOONOOL。</p>
+      </article>
+
+      <article id="faq-4">
+        <h2>4. Safe-to-Use 报告里面有什么？</h2>
+        <p>Safe-to-Use 报告不是相似度报告，而是一份 “图片可用性体检”，包含：</p>
+        <ul>
+          <li>视觉稳定性分析</li>
+          <li>潜在混淆点提醒（非法律判定）</li>
+          <li>独特性 / 辨识度表现</li>
+          <li>可视化标注（重点亮点和注意点）</li>
+          <li>总体可用性等级</li>
+        </ul>
+        <p>报告的目的不是告诉你有没有撞图，而是告诉你这张图在实际使用中是否“稳健好用”。</p>
+      </article>
+
+      <article id="faq-5">
+        <h2>5. LOONOOL 会保存我的图片吗？</h2>
+        <p>
+          不会长期保存。原图仅用于分析，最多保留 72 小时，之后自动删除。
+          开启“保存历史”时，保存的也只是报告和缩略图，不是原图。
+        </p>
+      </article>
+
+      <article id="faq-6">
+        <h2>6. 图片可以商用吗？你们会给结论吗？</h2>
+        <p>
+          我们提供的是 技术层面的可用性分析与提示，
+          最终能否商用，还需要结合你的使用场景、地区、文案和实际业务决定。
+        </p>
+      </article>
+
+      <article id="faq-7">
+        <h2>7. 支持哪些类型的图片？</h2>
+        <ul>
+          <li>支持 JPG / PNG / WebP</li>
+          <li>适用于 Logo、图形主视觉、包装图、电商主图等</li>
+          <li>不支持文档、视频、人脸识别或违法违规图像</li>
+        </ul>
+      </article>
+
+      <article id="faq-8">
+        <h2>8. 需要登录才能生成报告吗？</h2>
+        <p>
+          需要。登录后可保存报告、同步历史记录、持续跟踪你的修改版本。
+        </p>
+      </article>
+
+      <article id="faq-9">
+        <h2>9. 一张图片可以生成几种报告？</h2>
+        <p>默认会生成 Safe-to-Use 报告。你也可以选择查看：</p>
+        <ul>
+          <li>原创度报告（Originality，逐步开放）</li>
+          <li>行业报告（如 Amazon / Food / Beauty 等，逐步开放）</li>
+        </ul>
+      </article>
+
+      <article id="faq-10">
+        <h2>10. 报告可以分享和下载吗？</h2>
+        <p>可以。支持：</p>
+        <ul>
+          <li>PDF 下载</li>
+          <li>分享只读链接给团队、客户、供应商查看</li>
+        </ul>
+      </article>
+
+      <article id="faq-11">
+        <h2>11. 如果分析失败会怎么处理？</h2>
+        <p>
+          系统会给出明确提示，你可以重新上传或稍后重试。不会影响你的其他图片或报告。
+        </p>
+      </article>
+
+      <article id="faq-12">
+        <h2>12. 之后会增加哪些功能？</h2>
+        <p>我们正在开发：</p>
+        <ul>
+          <li>更多行业规范检测</li>
+          <li>更深入的原创度/差异度分析</li>
+          <li>团队协作和企业版</li>
+          <li>私有图库比对（企业专属）</li>
+        </ul>
+      </article>
+    </main>
+  </div>
+
+  <script src="toc.js"></script>
 </body>
 </html>
