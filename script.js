@@ -1,22 +1,13 @@
-function toggleFaq(element) {
-    const faqItem = element.closest('.faq-item');
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
-    // Open clicked item if it wasn't active
-    if (!isActive) {
-        faqItem.classList.add('active');
-    }
-}
+// You can add JavaScript for functionality such as expanding/collapsing FAQ items, etc.
+// For example:
 
-// Initialize: Open first FAQ item by default
 document.addEventListener('DOMContentLoaded', function() {
-    const firstFaq = document.querySelector('.faq-item');
-    if (firstFaq) {
-        firstFaq.classList.add('active');
-    }
+  const faqItems = document.querySelectorAll('.faq-item h3');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const content = item.nextElementSibling;
+      content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    });
+  });
 });
+
