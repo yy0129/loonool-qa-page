@@ -1,33 +1,89 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LOONOOL FAQ</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOONOOL 常见问题</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="header">
-    <div class="logo">
-      <img src="logo.png" alt="LOONOOL Logo">
-      <span class="logo-text">LOONOOL</span>
+  <header class="top-bar">
+    <div class="logo-area">
+      <div class="logo-box">
+        <span class="logo-icon">✔</span>
+        <span class="logo-text">LOGO</span>
+      </div>
+      <nav class="nav">
+        <a class="nav-link active" href="#">首页</a>
+        <a class="nav-link" href="#">检测重量</a>
+        <a class="nav-link" href="#">历史结果</a>
+        <a class="nav-link" href="#">了解更多</a>
+      </nav>
     </div>
-    <div class="nav-links">
-      <a href="#" class="nav-link">首页</a>
-      <a href="#" class="nav-link">检测查重</a>
-      <a href="#" class="nav-link">历史结果</a>
-      <a href="#" class="nav-link">了解更多</a>
+    <div class="user-menu">
+      <span class="version">了解更多 · 版本3</span>
+      <img class="avatar" src="https://i.pravatar.cc/60?img=5" alt="Avatar" />
     </div>
-  </div>
+  </header>
 
-  <div class="faq-section">
-    <h2>常见问题</h2>
-    <div class="faq-item">
-      <h3>1. LOONOOL 是什么？</h3>
-      <p>LOONOOL 是一款帮助判断图片是否适合商用（Safe-to-Use）的工具。你上传一张图片，我们会自动分析视觉、文案和基础行业规则，并生成一份清晰易懂的可用性报告。</p>
-    </div>
-    <div class="faq-item">
-      <h3>2. LOONOOL 和普通相似度工具有什么不同？</h3>
-      <p>大多数相似度工具只告诉你“这张图和别人像不像”。LOONOOL 的关注点不是“像”，而是：这张图是否适合商用？有没有可能造成视觉混淆或误解？</p>
-    </div>
-    <div class="faq-item">
+  <main class="faq-page">
+    <section class="hero">
+      <h1>常见问题</h1>
+      <p class="hero-tip">
+        如需帮助或有建议，欢迎发送邮件至 <a href="mailto:jinxinqian43@gmail.com">jinxinqian43@gmail.com</a>，我们会尽快回复。
+      </p>
+    </section>
+
+    <section class="faq-list">
+      <article class="faq-item open">
+        <button class="faq-title" data-id="1">
+          <span>1. LOONOOL 是什么？</span>
+          <span class="toggle-icon">◉</span>
+        </button>
+        <div class="faq-content">
+          LOONOOL 是一款帮助你判断图片是否适合商用（Safe-to-Use）的工具。上传一张图片，我们会自动分析视觉、文案和基础行业规则，并生成一份清晰易懂的可用性报告。
+        </div>
+      </article>
+
+      <article class="faq-item open">
+        <button class="faq-title" data-id="2">
+          <span>2. LOONOOL 和普通相似度工具有什么不同？</span>
+          <span class="toggle-icon">◉</span>
+        </button>
+        <div class="faq-content">
+          大多数相似度工具只告诉你“这张图和别人像不像”。LOONOOL 的关注点不是“像”，而是：这张图是否适合商用？有没有可能造成视觉混淆或误解？我们会从可用性的角度分析图片：
+          <ul>
+            <li>是否存在让人看不清、误读、误解的视觉结构</li>
+            <li>是否有容易和常见图形混淆的关键元素</li>
+            <li>图形的稳定度、辨识度是否足够</li>
+            <li>哪些部分可能在应用场景中出现问题</li>
+          </ul>
+          简单来说：相似度工具告诉你像不像；LOONOOL 告诉你“能不能用、哪里要注意、怎么改更稳”。
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-title" data-id="3">
+          <span>3. LOONOOL 适合谁使用？</span>
+          <span class="toggle-icon">◉</span>
+        </button>
+        <div class="faq-content">
+          正在做品牌图形 / Logo 的设计团队；需要频繁制作产品图、电商图的运营团队；想降低视觉“撞脸”概率的品牌方；需要判断图片能否用于广告或包装的市场部门；任何想要“稳一点再用图”的人。
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <button class="faq-title" data-id="4">
+          <span>4. Safe-to-Use 报告里面有什么？</span>
+          <span class="toggle-icon">◉</span>
+        </button>
+        <div class="faq-content">
+          Safe-to-Use 报告不是相似度报告，而是一份“图片可用性体检”，包含视觉稳定性分析、潜在混淆点提醒、独特性 / 辨识度表现、可视化标注以及总体可用性等级。
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
