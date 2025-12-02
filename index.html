@@ -1,129 +1,79 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>常见问题 - LOONOOL</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <div class="version-info">了解更多, 版本3</div>
-    
-    <header class="header">
-        <div class="header-left">
-            <div class="logo">
-                <svg class="checkmark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 6L9 17l-5-5"/>
-                </svg>
-                <span class="logo-text">LOGO</span>
-            </div>
-        </div>
-        
-        <nav class="nav">
-            <a href="#" class="nav-link">首页</a>
-            <a href="#" class="nav-link">检测查重</a>
-            <a href="#" class="nav-link">历史结果</a>
-            <a href="#" class="nav-link active">了解更多</a>
-        </nav>
-        
-        <div class="header-right">
-            <div class="profile-picture">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="8" r="4"/>
-                    <path d="M6 21c0-3.314 2.686-6 6-6s6 2.686 6 6"/>
-                </svg>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="content-wrapper">
-            <h1 class="main-title">常见问题</h1>
-            
-            <p class="contact-info">
-                如需帮助或仍有疑问,欢迎发送邮件至 
-                <a href="mailto:jinxiqian43@gmail.com" class="email-link">jinxiqian43@gmail.com</a>
-                ,我们很乐意帮你解答。
-            </p>
-
-            <!-- FAQ List -->
-            <div class="faq-container">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-number">1.</span>
-                        <span class="faq-question-text">LOONOOL 是什么?</span>
-                        <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>LOONOOL 是一款帮助你判断图片是否适合商用(Safe-to-Use)的工具。你上传一张图片,我们会自动分析视觉、文案和基础行业规则,并生成一份清晰易懂的可用性报告。</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 2 -->
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-number">2.</span>
-                        <span class="faq-question-text">LOONOOL 和普通相似度工具有什么不同?</span>
-                        <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>大多数相似度工具只告诉你"这张图和别人像不像"。LOONOOL 的关注点不是"像",而是:这张图是否适合商用?有没有可能造成视觉混淆或误解?我们会从可用性的角度分析图片:</p>
-                        <ul>
-                            <li>是否存在让人看不清、误读、误解的视觉结构</li>
-                            <li>是否有容易和常见图形混淆的关键元素</li>
-                            <li>图形的稳定度、辨识度是否足够</li>
-                            <li>哪些部分可能在应用场景中出现问题</li>
-                        </ul>
-                        <p>简单来说:相似度工具告诉你像不像;LOONOOL 告诉你"能不能用、哪里要注意、怎么改更稳"。</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 3 -->
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-number">3.</span>
-                        <span class="faq-question-text">LOONOOL 适合谁使用?</span>
-                        <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>（此问题的答案内容待补充）</p>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 4 -->
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span class="faq-number">4.</span>
-                        <span class="faq-question-text">Safe-to-Use 报告里面有什么?</span>
-                        <button class="faq-toggle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M6 9l6 6 6-6"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="faq-answer">
-                        <p>（此问题的答案内容待补充）</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOONOOL FAQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #d6d6f3, #a0c8f4);
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 16px;
+    }
+    .faq-section {
+      margin: 20px;
+    }
+    .faq-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .faq-item {
+      background-color: white;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .faq-item h3 {
+      font-size: 18px;
+      font-weight: bold;
+      color: #555;
+    }
+    .faq-item p {
+      font-size: 16px;
+      color: #777;
+    }
+    .profile {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+    .profile img {
+      width: 40px;
+      height: 40px;
+      bor
