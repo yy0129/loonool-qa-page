@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC', 'Hiragino Sans GB', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
@@ -26,14 +26,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    height: 70px;
+    padding: 0 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
 }
 
 .header-left {
@@ -68,8 +67,9 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #666;
+    color: #000000;
     font-size: 15px;
+    font-weight: normal;
     transition: color 0.3s;
     position: relative;
 }
@@ -80,7 +80,7 @@ body {
 
 .nav-link.active {
     color: #2563eb;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .nav-link.active::after {
@@ -102,6 +102,7 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    overflow: hidden;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
@@ -120,6 +121,7 @@ body {
     position: relative;
     min-height: calc(100vh - 80px);
     padding: 60px 0;
+    background: linear-gradient(135deg, #e9d5ff 0%, #dbeafe 100%);
 }
 
 .content-wrapper {
@@ -129,26 +131,8 @@ body {
     position: relative;
 }
 
-/* Gradient Background */
-.main-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
-    z-index: 0;
-    border-radius: 0 0 0 100px;
-}
-
-.content-wrapper {
-    position: relative;
-    z-index: 1;
-}
-
 .main-title {
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 30px;
@@ -157,8 +141,8 @@ body {
 
 .contact-info {
     text-align: center;
-    color: #666;
-    font-size: 15px;
+    color: #999999;
+    font-size: 13px;
     margin-bottom: 50px;
     line-height: 1.8;
 }
@@ -179,30 +163,28 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .faq-item {
     background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.faq-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-color: #d1d5db;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
     display: flex;
     align-items: center;
-    padding: 24px 28px;
+    padding: 20px;
     cursor: pointer;
     user-select: none;
     gap: 12px;
     transition: background-color 0.2s;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
 }
 
 .faq-question:hover {
@@ -219,7 +201,7 @@ body {
 .faq-question-text {
     flex: 1;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 700;
     color: #1a1a1a;
 }
 
@@ -227,13 +209,16 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #6b7280;
     transition: all 0.3s;
-    border-radius: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
 .faq-toggle:hover {
@@ -255,16 +240,16 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.4s ease;
-    padding: 0 28px;
+    padding: 0 20px;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 1000px;
-    padding: 0 28px 24px 28px;
+    max-height: 2000px;
+    padding: 20px;
 }
 
 .faq-answer p {
-    color: #4b5563;
+    color: #4a4a4a;
     font-size: 15px;
     line-height: 1.8;
     margin-bottom: 12px;
@@ -277,13 +262,14 @@ body {
 .faq-answer ul {
     margin: 12px 0;
     padding-left: 24px;
-    color: #4b5563;
+    color: #4a4a4a;
     font-size: 15px;
     line-height: 1.8;
 }
 
 .faq-answer li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    line-height: 1.8;
 }
 
 .faq-answer li::marker {
@@ -299,6 +285,8 @@ body {
     }
 
     .header {
+        height: auto;
+        min-height: 70px;
         padding: 15px 20px;
         flex-wrap: wrap;
     }
@@ -314,7 +302,7 @@ body {
     }
 
     .main-title {
-        font-size: 36px;
+        font-size: 24px;
     }
 
     .content-wrapper {
@@ -328,12 +316,9 @@ body {
     .faq-answer {
         padding: 0 20px;
     }
-
+    
     .faq-item.active .faq-answer {
-        padding: 0 20px 20px 20px;
+        padding: 20px;
     }
 
-    .main-content::before {
-        width: 60%;
-    }
 }
