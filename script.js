@@ -1,13 +1,8 @@
-// You can add JavaScript for functionality such as expanding/collapsing FAQ items, etc.
-// For example:
+const faqButtons = document.querySelectorAll(".faq-title");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const faqItems = document.querySelectorAll('.faq-item h3');
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const content = item.nextElementSibling;
-      content.style.display = content.style.display === 'none' ? 'block' : 'none';
-    });
+faqButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+    item.classList.toggle("open");
   });
 });
-
